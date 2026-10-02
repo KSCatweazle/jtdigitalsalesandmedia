@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JT Digital, Sales &amp; Media – Ihr Webauftritt aus einer Hand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f8f8;--surface:#fff;--ink:#13252c;--muted:#51646b;--line:#d5e0e2;--brand:#0e5a63;--brand-ink:#fff;--soft:#e2eff0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1b1f;--surface:#16272c;--ink:#e8f1f2;--muted:#9bb0b5;--line:#2a4047;--brand:#5cc3cf;--brand-ink:#08262b;--soft:#1b3339}}
+:root[data-theme="dark"]{--bg:#0f1b1f;--surface:#16272c;--ink:#e8f1f2;--muted:#9bb0b5;--line:#2a4047;--brand:#5cc3cf;--brand-ink:#08262b;--soft:#1b3339}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;line-height:1.15;margin:0 0 .6em;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:700;text-wrap:balance;hyphens:manual}
+h1 span{display:block;text-wrap:balance}
+h2{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:700}
+h3{font-size:1.2rem;font-weight:500}
+p{margin:0 0 1em;max-width:62ch}
+a{color:var(--brand)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+header{border-bottom:1px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;flex-wrap:wrap}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.15rem;text-decoration:none;color:var(--ink)}
+.logo span{color:var(--muted);font-weight:500}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:600}
+nav a:hover{text-decoration:underline}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);padding:.8rem 1.4rem;border-radius:6px;font-weight:600;text-decoration:none}
+.btn:hover{filter:brightness(1.1)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+section{padding:4rem 0}
+.hero{padding:4.5rem 0 3.5rem}
+.hero p{font-size:1.25rem;color:var(--muted)}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
+.promises{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:0;margin-top:2.5rem;border-top:2px solid var(--ink)}
+.promises div{padding:1.1rem 1.25rem 1.1rem 0}
+.promises strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem}
+.promises span{color:var(--muted)}
+.band{background:var(--soft)}
+.tags{display:flex;flex-wrap:wrap;gap:.6rem;padding:0;margin:1.2rem 0 0;list-style:none}
+.tags li{background:var(--surface);border:1px solid var(--line);padding:.4rem .9rem;border-radius:99px}
+ol.steps{list-style:none;padding:0;margin:2rem 0 0;counter-reset:s;display:grid;gap:0}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.2rem 0;border-top:1px solid var(--line)}
+ol.steps li::before{content:counter(s);font:700 2rem/1 "Bricolage Grotesque",sans-serif;color:var(--brand)}
+ol.steps p{margin:0;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:2rem}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.6rem}
+.panel ul{padding-left:1.2rem;margin:0}
+.panel li{margin-bottom:.4rem}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.2rem;margin:1.2rem 0 1.6rem}
+.contact dt{font-weight:600}
+.contact dd{margin:0}
+.menu-btn{display:none;align-items:center;gap:.5rem;background:transparent;color:var(--ink);border:2px solid var(--ink);border-radius:6px;padding:.5rem .9rem;font:600 1rem "Source Sans 3",system-ui,sans-serif;cursor:pointer}
+.menu-btn .ico{width:1.1rem;height:.8rem;border-top:2px solid currentColor;border-bottom:2px solid currentColor;position:relative}
+.menu-btn .ico::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px solid currentColor;transform:translateY(-50%)}
+@media(max-width:44rem){
+.bar{flex-wrap:wrap;flex-direction:row;align-items:center;justify-content:space-between;gap:0;padding:.7rem 0}
+.logo{font-size:1.05rem;margin-left:8px}
+.menu-btn{display:inline-flex;margin-right:8px}
+nav{display:none;order:3;width:100%;flex-direction:column;gap:0;margin-top:.6rem}
+nav.open{display:flex}
+nav a{display:block;padding:.95rem .2rem;border-top:1px solid var(--line);font-size:1.1rem}
+}
+button.btn{font:600 1.0625rem "Source Sans 3",system-ui,sans-serif;cursor:pointer}
+.legal{padding:3rem 0 4rem}
+.legal h1{font-size:clamp(1.8rem,5vw,2.6rem)}
+.legal h2{font-size:1.25rem;margin-top:1.8em}
+.legal .note{background:var(--soft);border-left:4px solid var(--brand);padding:.8rem 1rem;margin-top:2rem}
+footer{border-top:1px solid var(--line);padding:1.5rem 0;color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap bar">
+<a class="logo" href="#home">JT Digital <span>Sales &amp; Media</span></a>
+<button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav"><span class="ico" aria-hidden="true"></span>Menü</button>
+<nav id="nav" aria-label="Hauptnavigation">
+<a href="#ablauf">Ablauf</a><a href="#fuer-wen">Unternehmen</a><a href="#agenturen">Agenturen</a><a href="#kontakt">Kontakt</a>
+</nav>
+</div>
+</header>
+
+<main id="home">
+<section class="hero">
+<div class="wrap">
+<h1><span>Ein Webauftritt, der sitzt.</span> <span>Mit einem festen Ansprechpartner.</span></h1>
+<p>Ich vermittle kleine Unternehmen und Vereine an spezialisierte Umsetzer für Website und Social Media und begleite Ihr Projekt von der ersten Idee bis zum Start.</p>
+<div class="cta">
+<a class="btn" href="#kontakt">Kostenloses Erstgespräch</a>
+<a class="btn alt" href="#ablauf">So läuft es ab</a>
+</div>
+<div class="promises">
+<div><strong>Eine Person für alles</strong><span>Sie sprechen mit mir, nicht mit einem Ticketsystem.</span></div>
+<div><strong>Klarer Ablauf</strong><span>Sie wissen vorab, was wann passiert.</span></div>
+<div><strong>Offene Konditionen</strong><span>Keine versteckten Kosten, alles schriftlich vorab.</span></div>
+</div>
+</div>
+</section>
+
+<section id="ablauf" class="band">
+<div class="wrap">
+<h2>So läuft Ihr Projekt ab</h2>
+<p>Vier Schritte, in dieser Reihenfolge. Zwischendurch melde ich mich mit dem aktuellen Stand.</p>
+<ol class="steps">
+<li><div><h3>Kennenlernen</h3><p>Wir sprechen über Ihr Angebot, Ihre Kunden und Ihre Ziele. Das Gespräch kostet nichts.</p></div></li>
+<li><div><h3>Angebot</h3><p>Sie erhalten ein schriftliches Angebot mit Leistungsumfang, Zeitplan und Preis.</p></div></li>
+<li><div><h3>Umsetzung</h3><p>Ein erfahrenes Team setzt Ihren Auftritt um. Ich koordiniere, Sie geben Feedback an einer Stelle.</p></div></li>
+<li><div><h3>Start und Betreuung</h3><p>Ihr Auftritt geht online. Bei Fragen bin ich weiterhin für Sie da.</p></div></li>
+</ol>
+</div>
+</section>
+
+<section id="fuer-wen">
+<div class="wrap">
+<h2>Für Unternehmen und Vereine, die gut auftreten wollen</h2>
+<p>Sie führen ein Geschäft, eine Praxis, ein Gasthaus oder einen Verein und haben keine Zeit, sich um Website und Social Media zu kümmern? Genau dafür bin ich da.</p>
+<ul class="tags" aria-label="Beispiele für Branchen">
+<li>Juweliere</li><li>Gasthäuser</li><li>Yogalehrer und Studios</li><li>Vereine</li><li>Einzelhandel vor Ort</li>
+</ul>
+<div class="two" style="margin-top:2.2rem">
+<div class="panel"><h3>Website</h3><p>Neue Website oder Relaunch, verständlich aufgebaut und auf dem Handy genauso gut nutzbar wie am Rechner.</p></div>
+<div class="panel"><h3>Social Media</h3><p>Auftritt und Inhalte für die Kanäle, auf denen Ihre Kunden unterwegs sind.</p></div>
+</div>
+</div>
+</section>
+
+<section id="agenturen" class="band">
+<div class="wrap">
+<h2>Für Agenturen: Aufträge, die Sie nicht akquirieren müssen</h2>
+<div class="two">
+<div>
+<p>Ich spreche mit den Kunden, kläre Wünsche und Budget und übergebe Ihnen ein sauber vorbereitetes Briefing. Sie konzentrieren sich auf die Umsetzung.</p>
+<p>Die Vergütung erfolgt pro umgesetztem Projekt.</p>
+</div>
+<div class="panel">
+<h3>Was Sie bekommen</h3>
+<ul>
+<li>Vorqualifizierte Anfragen mit klarem Briefing</li>
+<li>Einen festen Ansprechpartner für den Kunden</li>
+<li>Abrechnung nur bei tatsächlich umgesetzten Projekten</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="kontakt" class="contact">
+<div class="wrap">
+<h2>Sprechen wir darüber</h2>
+<p>Schreiben Sie mir kurz, worum es geht. Ich melde mich in der Regel innerhalb eines Werktags.</p>
+<dl>
+<dt>Name</dt><dd>Jonas Throm</dd>
+<dt>E-Mail</dt><dd><a href="mailto:jt-digital@web.de">jt-digital@web.de</a></dd>
+<dt>Telefon</dt><dd>[0000 000000]</dd>
+<dt>Region</dt><dd>Boxberg</dd>
+</dl>
+<div class="cta">
+<a class="btn" id="mailBtn" href="mailto:jt-digital@web.de?subject=Anfrage%20Webauftritt" target="_blank" rel="noopener">E-Mail schreiben</a>
+<button class="btn alt" id="copyBtn" type="button">Adresse kopieren</button>
+</div>
+<p id="copyMsg" role="status" aria-live="polite" style="min-height:1.6em;margin-top:.8rem;color:var(--muted)"></p>
+</div>
+</section>
+</main>
+
+<main id="impressum" class="legal" hidden>
+<div class="wrap">
+<h1>Impressum</h1>
+<h2>Angaben gemäß § 5 DDG</h2>
+<p>Jonas Throm<br>JT Digital, Sales &amp; Media<br>[Straße und Hausnummer]<br>[PLZ Ort]</p>
+<h2>Kontakt</h2>
+<p>Telefon: [0000 000000]<br>E-Mail: jt-digital@web.de</p>
+<h2>Umsatzsteuer-ID</h2>
+<p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [DE000000000] (falls vorhanden)</p>
+<h2>Verantwortlich für den Inhalt</h2>
+<p>Jonas Throm, Anschrift wie oben</p>
+<p class="note">Platzhalter: Bitte alle Angaben ersetzen und den Text vor der Veröffentlichung rechtlich prüfen lassen.</p>
+<p><a href="#home">Zurück zur Startseite</a></p>
+</div>
+</main>
+
+<main id="datenschutz" class="legal" hidden>
+<div class="wrap">
+<h1>Datenschutzerklärung</h1>
+<h2>1. Verantwortlicher</h2>
+<p>Jonas Throm, JT Digital, Sales &amp; Media, [Anschrift], E-Mail: jt-digital@web.de</p>
+<h2>2. Hosting</h2>
+<p>Diese Website wird bei [Hosting-Anbieter, Adresse] gehostet. Beim Aufruf werden technisch notwendige Daten (z. B. IP-Adresse, Datum und Uhrzeit, aufgerufene Seite) in Server-Logfiles verarbeitet. [Rechtsgrundlage und Speicherdauer ergänzen.]</p>
+<h2>3. Schriftarten</h2>
+<p>Diese Seite lädt Schriftarten von Google Fonts. Dabei wird Ihre IP-Adresse an Google übertragen. [Alternativ: Schriftarten lokal einbinden und diesen Abschnitt streichen.]</p>
+<h2>4. Kontaktaufnahme</h2>
+<p>Wenn Sie mir per E-Mail oder Telefon schreiben, verarbeite ich Ihre Angaben zur Bearbeitung Ihrer Anfrage. [Rechtsgrundlage und Speicherdauer ergänzen.]</p>
+<h2>5. Ihre Rechte</h2>
+<p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren. [Zuständige Behörde ergänzen.]</p>
+<p class="note">Platzhalter: Dieser Text ist nur ein Gerüst und ersetzt keine Rechtsberatung. Bitte vor der Veröffentlichung an deine tatsächliche Nutzung anpassen und prüfen lassen.</p>
+<p><a href="#home">Zurück zur Startseite</a></p>
+</div>
+</main>
+
+<footer>
+<div class="wrap">
+<span>© 2026 JT Digital, Sales &amp; Media</span>
+<span><a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a></span>
+</div>
+</footer>
+<script>
+function route(){
+var h=location.hash.slice(1),legal=h==='impressum'||h==='datenschutz';
+document.getElementById('home').hidden=legal;
+['impressum','datenschutz'].forEach(function(id){document.getElementById(id).hidden=h!==id});
+var el=h&&document.getElementById(h);
+if(legal||!el){window.scrollTo(0,0)}else{el.scrollIntoView()}
+}
+var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+function setMenu(o){nav.classList.toggle('open',o);btn.setAttribute('aria-expanded',o)}
+btn.addEventListener('click',function(){setMenu(!nav.classList.contains('open'))});
+nav.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false)});
+var cb=document.getElementById('copyBtn'),cm=document.getElementById('copyMsg'),addr='jt-digital@web.de';
+function copied(ok){cm.textContent=ok?'Adresse kopiert: '+addr:'Bitte Adresse manuell kopieren: '+addr}
+cb.addEventListener('click',function(){
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(function(){copied(true)},fallback)}else{fallback()}
+function fallback(){try{var t=document.createElement('textarea');t.value=addr;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();var ok=document.execCommand('copy');document.body.removeChild(t);copied(ok)}catch(e){copied(false)}}
+});
+window.addEventListener('hashchange',route);
+route();
+</script>
+</body>
+</html>

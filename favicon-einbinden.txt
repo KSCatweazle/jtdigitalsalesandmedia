@@ -1,0 +1,15 @@
+Favicon auf GitHub Pages einbinden
+
+1. Lege ALLE Dateien aus dieser ZIP-Datei in dasselbe Verzeichnis (Ordner) deines Repositories, in dem auch die Startseite liegt.
+   Die Startseite muss "index.html" heißen. Benenne jt-digital.html also in index.html um.
+
+2. In der Startseite stehen bereits diese Zeilen im <head> (mit relativen Pfaden, ohne führenden Schrägstrich):
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+3. Warte nach dem Hochladen ein paar Minuten, bis GitHub Pages die Seite neu veröffentlicht hat.
+4. Prüfe die Datei direkt im Browser: deine-adresse/favicon.ico
+5. Lade die Seite mit Strg+Shift+R neu oder öffne sie in einem privaten Fenster, weil Browser Favicons stark zwischenspeichern.

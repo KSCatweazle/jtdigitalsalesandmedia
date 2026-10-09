@@ -199,6 +199,70 @@ footer .wrap>span:first-child{order:3;font-size:.88rem;line-height:1.6}
 footer .sl{display:block}
 footer .dot{display:none}
 }
+#leistungen{background:var(--soft)}
+.panel.featured{border:2px solid var(--brand);margin-top:1.8rem}
+.badge{display:inline-block;background:var(--brand);color:var(--brand-ink);font:600 .78rem "Source Sans 3",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .8rem;border-radius:99px;margin-bottom:.8rem}
+.panel.featured .btn{margin-top:.4rem}
+#leistungen .three{margin-top:1.2rem}
+.for-who{margin:1.4rem 0 0;color:var(--muted)}
+.h-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:.4rem 1rem}
+.price{font:700 1.7rem "Bricolage Grotesque",system-ui,sans-serif;color:var(--brand)}
+.mini{margin:1rem 0 .4rem}
+.mini.note{font-size:.92rem;color:var(--muted);margin:.8rem 0 1.1rem}
+.checklist{list-style:none;padding:0;margin:.4rem 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.55rem 1.8rem}
+.checklist li{position:relative;padding-left:1.7rem;margin:0}
+.checklist li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--brand);font-weight:700}
+.ways{margin-top:1.2rem}
+.path{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .6rem;margin:.6rem 0 .9rem}
+.path span{border:1px solid var(--line);border-radius:999px;padding:.3rem .85rem;font-weight:600;font-size:.95rem}
+.path i{font-style:normal;color:var(--brand);font-weight:700}
+@media(max-width:44rem){
+.path{flex-direction:column;align-items:stretch;gap:.3rem;margin:.8rem 0 1rem}
+.path span{text-align:center;border-radius:12px;padding:.55rem .8rem}
+.path i{text-align:center;transform:rotate(90deg);line-height:1;font-size:1.1rem}
+}
+.fit{margin-top:2.4rem;padding:1.4rem 1.5rem;border:2px solid var(--brand);border-radius:14px;background:var(--surface)}
+.fit h3{font-size:1.4rem;margin:0 0 .9rem}
+.tags.big{margin:0}
+.tags.big li{font-size:1.05rem;font-weight:600;padding:.5rem 1.1rem;border-color:var(--brand)}
+ol.steps strong{color:var(--ink)}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.9rem;margin-top:1rem}
+.cmp>div{border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;color:var(--ink)}
+.cmp>.cmp-yes{border:2px solid var(--brand);background:var(--surface)}
+.cmp .badge{display:inline-block;margin:0 .6rem .4rem 0}
+.cmp ul{margin:.5rem 0 0;padding-left:1.1rem;color:var(--muted)}
+.cmp li{margin-bottom:.3rem}
+.panel.recommended{border:2px solid var(--brand)}
+.panel.recommended .badge{margin-bottom:.8rem}
+.rec{margin-top:.8rem;padding:.8rem 1rem;border:2px solid var(--brand);border-radius:12px;background:var(--surface);color:var(--ink)}
+.rec .badge{margin:0 .5rem 0 0}
+.tags.sm li{font-size:.9rem;padding:.25rem .75rem}
+@media(max-width:44rem){
+section{padding:2.2rem 0}
+.hero{padding:1.6rem 0 1.4rem}
+.hero-art{display:none}
+h2{font-size:1.5rem;margin-bottom:.4em}
+p{margin-bottom:.8em}
+.panel{padding:1.1rem}
+.three,.two{gap:.8rem}
+.three{margin-top:1.2rem}
+.path{gap:.1rem;margin:.6rem 0 .7rem}
+.path span{padding:.35rem .7rem;font-size:.92rem}
+.path i{font-size:1rem}
+.fit{margin-top:1.6rem;padding:1.1rem}
+ol.steps li{padding:.9rem 0}
+.teaser{padding:1rem 0 1.6rem}
+.faq summary{padding:.85rem 2.2rem .85rem 0}
+.portrait{width:min(11rem,60vw)}
+.agrid{gap:1.2rem}
+}
+@media(min-width:56rem){.two.ways{grid-template-columns:1.5fr 1fr}.path span{font-size:.9rem;padding:.3rem .75rem}}
+.path span{white-space:nowrap}
+.fit{border:1px solid var(--line)}
+.nb{display:inline-block}
+.hero p{text-wrap:pretty}
+#ag-problem{padding-bottom:1.2rem}
+#telefonleitfaden{padding-top:1.2rem;padding-bottom:2.4rem}
 .legal{padding:3rem 0 4rem}
 .legal h1{font-size:clamp(1.8rem,5vw,2.6rem)}
 .legal h2{font-size:1.25rem;margin-top:1.8em}
@@ -230,7 +294,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem
 <p>Ich vermittle kleine Unternehmen und Vereine an spezialisierte Umsetzer für Website und Social Media und begleite Ihr Projekt von der ersten Idee bis zum Start.</p>
 <div class="cta">
 <a class="btn" href="#kontakt">Kostenloses Erstgespräch</a>
-<a class="btn alt" href="#ablauf">So läuft es ab</a>
+<a class="btn alt" href="#leistungen">Meine Leistungen</a>
 </div>
 </div>
 <figure class="hero-art"><svg class="art" viewBox="0 0 520 410" role="img" aria-label="Skizze einer Website auf Laptop und Handy">
@@ -253,53 +317,56 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem
 <rect class="brand" x="384" y="330" width="100" height="26" rx="8"/>
 </svg></figure>
 </div>
-<div class="promises">
-<div><strong>Eine Person für alles</strong><span>Sie sprechen mit mir, nicht mit einem Ticketsystem.</span></div>
-<div><strong>Klarer Ablauf</strong><span>Sie wissen vorab, was wann passiert.</span></div>
-<div><strong>Offene Konditionen</strong><span>Keine versteckten Kosten, alles schriftlich vorab.</span></div>
-</div>
+
 </div>
 </section>
 
-<section id="problem">
+
+<section id="leistungen">
 <div class="wrap">
-<h2>Kennen Sie das?</h2>
-<p>Ein guter Webauftritt ist wichtig. Aber neben dem Tagesgeschäft bleibt dafür oft weder Zeit noch Energie.</p>
-<div class="three">
-<div class="panel"><h3>Keine Zeit, keine Lust auf Betreuung</h3><p>Ein Webauftritt will abgestimmt, getestet und korrigiert werden. Wer nebenbei einen Betrieb oder Verein führt, möchte sich nicht auch noch um ein Projekt kümmern.</p></div>
-<div class="panel"><h3>Zu viele Agenturen, zu wenig Überblick</h3><p>Es gibt viele Anbieter mit ähnlichen Versprechen. Welche passt zu meinem Betrieb, und wem kann ich vertrauen?</p></div>
-<div class="panel"><h3>Angebote, die man nicht vergleichen kann</h3><p>Unterschiedliche Leistungen, unklare Preise und Fachbegriffe machen die Entscheidung schwer. Dazu kommt die Sorge vor versteckten Kosten.</p></div>
+<h2>Meine Leistungen</h2>
+<p>Ein Webauftritt aus einer Hand für kleine Unternehmen und Vereine. Ich berate Sie, wähle den passenden Umsetzer aus und begleite Ihr Projekt bis zum Start.</p>
+<div class="two ways">
+<div class="panel recommended"><span class="badge">Empfohlen</span><h3>Weg 1: Erst prüfen</h3><div class="path"><span>Website-Check (49,99 €)</span><i>→</i><span>Erstgespräch</span><i>→</i><span>Angebot</span><i>→</i><span>Los geht's</span></div><p><strong>Der beste Start:</strong> Sie wissen vorab, wo Ihr Auftritt steht, und das Erstgespräch kommt schneller auf den Punkt.</p></div>
+<div class="panel"><h3>Weg 2: Direkt starten</h3><div class="path"><span>Erstgespräch</span><i>→</i><span>Angebot</span><i>→</i><span>Los geht's</span></div><p>Das Erstgespräch ohne Website-Check ist kostenlos und unverbindlich.</p></div>
 </div>
-<p style="margin-top:2rem"><strong>Genau hier setze ich an:</strong> Ich übernehme die Betreuung, sortiere für Sie vor und bringe Sie mit einem passenden Umsetzer zusammen. Sie haben einen Ansprechpartner und wissen vorab, was auf Sie zukommt.</p>
+<div class="panel featured">
+<span class="badge">Einstieg</span>
+<h3 class="h-price">Website-Check <span class="price">49,99 €</span></h3>
+<p>Ich prüfe Ihre bestehende Website, und Sie erhalten ein kurzes schriftliches Briefing: Was ist gut, was fehlt, was lohnt sich? Festpreis, keine versteckten Kosten.</p>
+<p class="mini"><strong>Das prüfe ich:</strong></p>
+<ul class="tags sm"><li>Handy-Ansicht</li><li>Ladezeit</li><li>Inhalt und Aktualität</li><li>Auffindbarkeit bei Google</li><li>Vertrauen</li><li>Gestaltung und Bedienung</li></ul>
+<p class="mini note"><strong>Persönlich fachlich geprüft.</strong> Kein blindes KI-Ergebnis. Der Check ersetzt keine Rechtsberatung.</p>
+<a class="btn" href="#kontakt">Website-Check anfragen</a>
+</div>
+<div class="three">
+<div class="panel"><h3>Website oder Relaunch</h3><p>Neue Website oder Neuaufbau, übersichtlich und am Handy genauso gut nutzbar wie am Rechner.</p></div>
+<div class="panel"><h3>Social Media</h3><p>Auftritt und Inhalte für die Kanäle, auf denen Ihre Kunden unterwegs sind.</p></div>
+<div class="panel"><h3>Projektbegleitung und Betreuung</h3><p>Ich koordiniere Ihr Projekt bis zum Start und bin danach weiter für Sie da.</p></div>
+</div>
+<div class="fit">
+<h3>Optimal passend für:</h3>
+<ul class="tags big" aria-label="Zielgruppen">
+<li>Juweliere</li><li>Gasthäuser und Restaurants</li><li>Cafés</li><li>Yogalehrer und Studios</li><li>Friseur- und Kosmetiksalons</li><li>Boutiquen und Fachgeschäfte</li><li>Vereine</li>
+</ul>
+</div>
 </div>
 </section>
-
 <section id="ablauf">
 <div class="wrap">
 <h2>So läuft Ihr Projekt ab</h2>
-<p>Vier Schritte, in dieser Reihenfolge. Zwischendurch melde ich mich mit dem aktuellen Stand.</p>
+<p>Fünf Schritte, in dieser Reihenfolge. Zwischendurch melde ich mich mit dem aktuellen Stand.</p>
 <ol class="steps">
-<li><div><h3>Kennenlernen</h3><p>Wir sprechen über Ihr Angebot, Ihre Kunden und Ihre Ziele. Das Gespräch kostet nichts.</p></div></li>
-<li><div><h3>Angebot</h3><p>Sie erhalten ein schriftliches Angebot mit Leistungsumfang, Zeitplan und Preis.</p></div></li>
-<li><div><h3>Umsetzung</h3><p>Ein erfahrenes Team setzt Ihren Auftritt um. Ich koordiniere, Sie geben Feedback an einer Stelle.</p></div></li>
-<li><div><h3>Start und Betreuung</h3><p>Ihr Auftritt geht online. Bei Fragen bin ich weiterhin für Sie da.</p></div></li>
+<li><div><h3>Weg wählen</h3><p>Mit oder ohne Website-Check (49,99 €). Wir empfehlen den Check als Start.</p></div></li>
+<li><div><h3>Erstgespräch</h3><p>Unverbindlich und auf Augenhöhe: Wir klären Ihre Ziele und Wünsche.</p>
+<div class="rec"><span class="badge">Empfohlen</span> <strong>Mit Website-Check:</strong> Wir sprechen direkt über konkrete Punkte. Das geht einfacher und schneller, und das Angebot passt genauer.</div></div></li>
+<li><div><h3>Der passende Umsetzer</h3><p>Ich bringe Sie mit dem optimalen Umsetzer für Ihr Projekt zusammen.</p></div></li>
+<li><div><h3>Personalisiertes Angebot</h3><p>Sie erhalten ein schriftliches Angebot mit Leistungsumfang, Zeitplan und Preis, zugeschnitten auf Ihren Betrieb.</p></div></li>
+<li><div><h3>Umsetzung</h3><p>Ihr Webauftritt wird umgesetzt. Ich koordiniere, Sie geben Feedback an einer Stelle, und auch nach dem Start bin ich für Sie da.</p></div></li>
 </ol>
 </div>
 </section>
 
-<section id="fuer-wen">
-<div class="wrap">
-<h2>Für Unternehmen und Vereine, die gut auftreten wollen</h2>
-<p>Sie führen ein Geschäft, eine Praxis, ein Gasthaus oder einen Verein und haben keine Zeit, sich um Website und Social Media zu kümmern? Genau dafür bin ich da.</p>
-<ul class="tags" aria-label="Beispiele für Branchen">
-<li>Juweliere</li><li>Gasthäuser</li><li>Yogalehrer und Studios</li><li>Vereine</li><li>Einzelhandel vor Ort</li>
-</ul>
-<div class="two" style="margin-top:2.2rem">
-<div class="panel"><svg class="ico-s" viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="7" width="34" height="26" rx="5"/><path d="M3 15h34"/><circle cx="8.5" cy="11" r=".8"/><circle cx="12.5" cy="11" r=".8"/><path d="M9 22h12M9 27h8"/></svg><h3>Website</h3><p>Neue Website oder Relaunch, verständlich aufgebaut und auf dem Handy genauso gut nutzbar wie am Rechner.</p></div>
-<div class="panel"><svg class="ico-s" viewBox="0 0 40 40" aria-hidden="true"><path d="M7 8h26a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3H21l-7 6v-6H7a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z"/><path d="M11 16h18M11 22h11"/></svg><h3>Social Media</h3><p>Auftritt und Inhalte für die Kanäle, auf denen Ihre Kunden unterwegs sind.</p></div>
-</div>
-</div>
-</section>
 
 
 
@@ -326,7 +393,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem
 <div class="wrap">
 <p class="eyebrow">Für Agenturen</p>
 <h1><span>Aufträge für Ihre Agentur.</span> <span>Ohne eigene Akquise.</span></h1>
-<p>Ich spreche mit kleinen Unternehmen und Vereinen, kläre Wünsche und Budget und übergebe Ihnen ein sauber vorbereitetes Briefing. Sie konzentrieren sich auf die Umsetzung.</p>
+<p>Ich spreche mit kleinen Unternehmen und Vereinen, kläre Wünsche und Budget und übergebe Ihnen ein sauber vorbereitetes Briefing. <span class="nb">Sie konzentrieren sich auf die Umsetzung.</span></p>
 <div class="formula" role="img" aria-label="Ihre bisherigen Kanäle plus JT Digital ergibt maximale Anfragen">
 <div class="pill"><strong>Ihre bisherigen Kanäle</strong><span>Empfehlungen, eigene Akquise, Website</span></div>
 <span class="op">+</span>
@@ -337,7 +404,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem
 <div class="cta"><a class="btn" href="#kontakt">Gespräch vereinbaren</a></div>
 </div>
 </section>
-<section>
+<section id="ag-problem">
 <div class="wrap">
 <h2>Kennen Sie das?</h2>
 <div class="three">
@@ -346,6 +413,26 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem
 <div class="panel"><h3>Unpassende Anfragen</h3><p>Anfragen ohne Budget oder Ziel binden Kapazität, ohne dass ein Projekt entsteht.</p></div>
 </div>
 <p style="margin-top:2rem"><strong>Genau hier setze ich an:</strong> Ich übernehme das Gespräch mit dem Kunden, sortiere vor und übergebe Ihnen ein Briefing, mit dem Sie direkt starten können.</p>
+</div>
+</section>
+<section id="telefonleitfaden">
+<div class="wrap">
+<div class="panel featured">
+<span class="badge">Für den eigenen Vertrieb</span>
+<h3 class="h-price">Telefonleitfaden <span class="price">9,99 €</span></h3>
+<p>Ihr Vertrieb läuft im eigenen Haus, aber Sie sind nicht so der Vertriebstyp? Mit diesem Leitfaden führen Sie Telefongespräche mit lokalen Kunden Schritt für Schritt bis zum Termin. Einmal kaufen, immer wieder verwenden.</p>
+<ul class="checklist">
+<li>Gesprächsablauf in sechs Schritten, mit fertigen Formulierungen</li>
+<li>Umgang mit Vorzimmer und Ansprechpartnern</li>
+<li>Antworten auf typische Einwände am Telefon</li>
+<li>Text für die Mailbox</li>
+<li>Gesprächsprotokoll und Anrufliste zum Ausdrucken</li>
+</ul>
+<p class="mini"><strong>So bestellen Sie:</strong> Schreiben Sie mir kurz, und ich schicke Ihnen den Leitfaden als PDF per E-Mail zu.</p>
+<p class="mini note">Einmalpreis, keine laufenden Kosten. Der Leitfaden enthält allgemeine Hinweise und ersetzt keine Rechtsberatung.</p>
+<a class="btn" href="#kontakt">Leitfaden bestellen</a>
+<p class="mini">Lieber nicht selbst telefonieren? Dann bin ich Ihr zusätzlicher Vertriebskanal.</p>
+</div>
 </div>
 </section>
 <section style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
@@ -362,7 +449,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem
 <section>
 <div class="wrap">
 <div class="two">
-<div class="panel"><h3>Was Sie bekommen</h3><ul><li>Vorqualifizierte Anfragen mit klarem Briefing</li><li>Einen festen Ansprechpartner für den Kunden</li><li>Abrechnung nur bei tatsächlich umgesetzten Projekten</li></ul></div>
+<div class="panel"><h3>Meine Leistungen für Agenturen</h3><ul><li>Gespräch mit dem Kunden: Wünsche, Ziele und Budget klären</li><li>Vorqualifizierte Anfrage mit klarem Briefing</li><li>Fester Ansprechpartner für den Kunden während des Projekts</li><li>Abrechnung nur bei tatsächlich umgesetzten Projekten</li></ul></div>
 <div class="panel"><h3>Passende Kunden</h3><p>Kleine Unternehmen und Vereine, die einen verlässlichen Webauftritt brauchen.</p><p>Zum Beispiel: Juweliere, Gasthäuser, Yogastudios, Vereine, Einzelhandel vor Ort.</p></div>
 </div>
 </div>
@@ -388,7 +475,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem
 <p class="eyebrow">Über mich</p>
 <h2>Ihr persönlicher Ansprechpartner in allen Belangen</h2>
 <p>Ich bin Jonas Throm. Ob Unternehmen, Verein oder Agentur: Sie sprechen von der ersten Idee bis zum Start mit mir, und auch danach bin ich für Sie da.</p>
-<p><a class="btn" href="#kontakt">Direkt Kontakt aufnehmen</a></p>
 </div>
 </div>
 </div>
@@ -404,7 +490,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem
 <dt><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Region</dt><dd>Deutschland</dd>
 </dl>
 <div class="cta">
-<a class="btn ic" id="mailBtn" href="mailto:info@jt-dsm.com?subject=Anfrage%20Webauftritt" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>E-Mail schreiben</a>
+<a class="btn ic" id="mailBtn" href="mailto:info@jt-dsm.com?subject=Anfrage%20Webauftritt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>E-Mail schreiben</a>
 <button class="btn alt ic" id="copyBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>Adresse kopieren</button>
 <a class="btn alt ig" href="https://www.instagram.com/jt.dsm/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg>Instagram</a>
 </div>
@@ -481,7 +567,7 @@ var cur='home';
 var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function show(h){
 var legal=h==='impressum'||h==='datenschutz';
-var view=legal||h==='agenturen'?h:(h===''||h==='home'||h==='problem'||h==='ablauf'||h==='fuer-wen')?'home':cur;
+var view=legal||h==='agenturen'?h:(h===''||h==='home'||h==='leistungen'||h==='ablauf')?'home':cur;
 if(view==='home'||view==='agenturen')cur=view;
 ['home','agenturen','impressum','datenschutz'].forEach(function(id){document.getElementById(id).hidden=id!==view});
 document.getElementById('contact').hidden=legal;

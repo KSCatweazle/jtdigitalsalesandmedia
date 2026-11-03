@@ -340,13 +340,12 @@ body.has-sel{padding-bottom:6rem}
 .bar{position:relative;flex-wrap:nowrap;gap:1rem;padding:.85rem 1.25rem}
 .logo{margin-right:auto;white-space:nowrap}
 .hdr-actions{display:flex;align-items:center;gap:.5rem;flex:none}
-.hdr-link{color:var(--ink);text-decoration:none;font-weight:600;padding:.45rem .8rem;border-radius:6px}
-.hdr-link:hover{background:var(--soft)}
-.hdr-link[aria-current="page"]{color:var(--brand)}
-.hdr-cta{background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600;padding:.45rem 1rem;border:2px solid var(--brand);border-radius:6px;white-space:nowrap}
-.hdr-cta:hover{background:transparent;color:var(--brand)}
-.menu-btn{display:inline-flex!important;margin:0!important;padding:.45rem .8rem;border-color:var(--line)}
-.menu-btn:hover,.menu-btn[aria-expanded="true"]{border-color:var(--ink)}
+.hdr-link,.hdr-cta,.menu-btn{display:inline-flex!important;align-items:center;gap:.5rem;height:2.6rem;margin:0!important;padding:0 1.05rem;border:2px solid var(--line);border-radius:6px;background:transparent;color:var(--ink);font:600 1rem/1 "Source Sans 3",system-ui,sans-serif;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color .15s,border-color .15s,color .15s}
+.hdr-cta:hover,.menu-btn:hover,.menu-btn[aria-expanded="true"]{border-color:var(--ink)}
+.hdr-cta[aria-current="page"]{border-color:var(--brand);color:var(--brand)}
+.hdr-link{background:var(--brand);border-color:var(--brand);color:var(--brand-ink);padding:0 1.3rem;box-shadow:0 0 0 4px color-mix(in srgb,var(--brand) 18%,transparent)}
+.hdr-link:hover{background:color-mix(in srgb,var(--brand) 85%,#fff);border-color:color-mix(in srgb,var(--brand) 85%,#fff)}
+.hdr-link[aria-current="page"]{box-shadow:none}
 .menu-btn .ico{transition:border-color .15s}
 .menu-btn .ico::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px solid currentColor;transform:translateY(-50%) rotate(-45deg);opacity:0;transition:opacity .15s}
 .menu-btn .ico::after{transition:transform .15s}
@@ -361,13 +360,8 @@ nav .nav-kontakt{display:block;margin-top:.35rem;padding-top:.85rem;border-top:1
 @media(max-width:44rem){
 .bar{padding:.7rem 1.25rem;gap:.5rem}
 .logo{margin-left:0!important;font-size:1rem}
-.hdr-link{display:none}
-.hdr-actions{gap:.4rem}
-.hdr-cta,.menu-btn{padding:.4rem .7rem}
-.hdr-cta{margin-right:0!important}
+.hdr-link,.hdr-cta{display:none!important}
+.menu-btn{height:2.5rem;padding:0 .9rem}
 nav{left:1.25rem;right:1.25rem;width:auto}
 nav a{padding:.85rem .9rem;font-size:1.1rem}
-}
-@media(max-width:24rem){
-.logo span{display:none}
 }

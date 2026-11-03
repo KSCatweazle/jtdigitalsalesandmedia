@@ -17,9 +17,12 @@
 <header>
 <div class="wrap bar">
 <a class="logo" href="/">JT Digital <span>Sales &amp; Media</span></a>
-<button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav"><span class="ico" aria-hidden="true"></span>Menü</button>
+<div class="hdr-actions">
+<a class="hdr-link" href="/leistungen">Leistungen</a>
+<a class="hdr-cta" href="/kontakt">Kontakt</a>
+<button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menü"><span class="ico" aria-hidden="true"></span><span class="mb-txt">Menü</span></button>
+</div>
 <nav id="nav" aria-label="Hauptnavigation"><a href="/leistungen">Leistungen &amp; Produkte</a><a href="/ablauf">Ablauf</a><a href="/faq">FAQ</a><a href="/ueber-mich">Über mich</a><a href="/agenturen">Für Agenturen</a><a href="/ratgeber" aria-current="page">Ratgeber</a><a class="nav-kontakt" href="/kontakt">Kontakt</a></nav>
-<a class="hdr-contact" href="/kontakt">Kontakt</a>
 </div>
 </header>
 <main>
@@ -52,6 +55,9 @@
 document.documentElement.classList.add('js');
 var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
 btn.addEventListener('click',function(){var o=!nav.classList.contains('open');nav.classList.toggle('open',o);btn.setAttribute('aria-expanded',o)});
+function closeNav(){nav.classList.remove('open');btn.setAttribute('aria-expanded',false)}
+document.addEventListener('click',function(e){if(nav.classList.contains('open')&&!nav.contains(e.target)&&!btn.contains(e.target))closeNav()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){closeNav();btn.focus()}});
 
 (function(){var mq=window.matchMedia('(max-width:44rem)');function sync(){document.querySelectorAll('details.stp').forEach(function(d){d.open=!mq.matches})}sync();if(mq.addEventListener)mq.addEventListener('change',sync)})();
 </script>

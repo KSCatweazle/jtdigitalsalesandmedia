@@ -1,0 +1,21 @@
+{
+  "name": "JT Digital Sales & Media",
+  "short_name": "JT DSM",
+  "start_url": "/",
+  "display": "browser",
+  "lang": "de",
+  "background_color": "#0f1b1f",
+  "theme_color": "#0f1b1f",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

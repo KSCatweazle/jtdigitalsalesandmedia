@@ -443,3 +443,10 @@ nav a{padding:.85rem .9rem;font-size:1.1rem}
 .skip:focus{left:1rem;top:.6rem}
 .pg-h{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:700}
 @media(max-width:44rem){.pg-h{font-size:1.5rem;margin-bottom:.4em}}
+
+/* Kontaktformular */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#cf-out.cf-ok{color:var(--brand);font-weight:600}
+#cf-out.cf-err{color:#ff8a80}
+#cf-out a{color:inherit}
+#cf-send:disabled{opacity:.6;cursor:wait}

@@ -25,7 +25,7 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="fonts/source-sans-3-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/bricolage-grotesque-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261103b">
+<link rel="stylesheet" href="style.css?v=20261107">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -48,12 +48,16 @@
 <form id="cform" class="cform" novalidate>
 <div class="row2">
 <div><label for="cf-name">Name *</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
-<div><label for="cf-tel">Telefon (optional)</label><input id="cf-tel" name="telefon" type="tel" autocomplete="tel"></div>
+<div><label for="cf-mail">E-Mail *</label><input id="cf-mail" name="email" type="email" autocomplete="email" inputmode="email" required></div>
 </div>
+<div class="row2">
+<div><label for="cf-tel">Telefon (optional)</label><input id="cf-tel" name="telefon" type="tel" autocomplete="tel"></div>
 <div><label for="cf-topic">Worum geht es?</label><select id="cf-topic" name="anliegen"><option>Website-Check</option><option>Erstgespräch</option><option>Neue Website</option><option>Onlineshop</option><option>Relaunch</option><option>Website oder Relaunch</option><option>Social Media</option><option>Instagram-Jahresplaner</option><option>10 fertige Postings</option><option>Social-Media-Set</option><option>Zusammenarbeit als Agentur</option><option>Telefonleitfaden</option><option>Mehrere Leistungen</option><option>Etwas anderes</option></select></div>
+</div>
+<div class="hp" aria-hidden="true"><label for="cf-bot">Bitte leer lassen</label><input id="cf-bot" name="botcheck" type="checkbox" tabindex="-1" autocomplete="off"></div>
 <div><label for="cf-text">Nachricht *</label><textarea id="cf-text" name="nachricht" rows="3" required></textarea></div>
 <div class="cta"><button class="btn ic" id="cf-send" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>Anfrage abschicken</button><a class="btn alt ig" href="https://www.instagram.com/jt.dsm/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg>Instagram</a></div>
-<p class="hint">Beim Klick öffnet sich Ihr E-Mail-Programm mit Ihrer Nachricht. Dort klicken Sie noch auf „Senden“. Kein Mailprogramm? <button type="button" id="copyBtn" class="linkbtn">Adresse kopieren</button></p>
+<p class="hint">Mit dem Absenden werden Ihre Angaben an mich übermittelt, damit ich Ihre Anfrage beantworten kann. Mehr dazu in der <a href="/datenschutz#kontaktaufnahme">Datenschutzerklärung</a>. Lieber direkt per E-Mail? <a href="mailto:info@jt-dsm.com">info@jt-dsm.com</a></p>
 <p id="cf-out" role="status" aria-live="polite"></p>
 </form>
 </div>
@@ -77,20 +81,32 @@ document.addEventListener('click',function(e){if(nav.classList.contains('open')&
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){closeNav();btn.focus()}});
 (function(){
 var f=document.getElementById('cform'); if(!f)return;
-var out=document.getElementById('cf-out'),el=f.elements,addr='info@jt-dsm.com';
-function msg(t,err){out.textContent=t;out.style.color=err?'#ff8a80':'var(--muted)'}
+var out=document.getElementById('cf-out'),el=f.elements,send=document.getElementById('cf-send'),addr='info@jt-dsm.com';
+var KEY='61acef21-5330-488e-8970-3fc6c5047a0f';
+function msg(t,kind){out.textContent=t;out.className=kind?'cf-'+kind:''}
+function fallback(a,body){
+msg('Das hat leider nicht geklappt. Bitte schreiben Sie mir direkt an ','err');
+var l=document.createElement('a');l.href='mailto:'+addr+'?subject='+encodeURIComponent('Anfrage: '+a)+'&body='+encodeURIComponent(body);l.textContent=addr;
+out.appendChild(l);out.appendChild(document.createTextNode(' – Ihre Nachricht ist dort schon eingetragen.'));
+}
 f.addEventListener('submit',function(e){
 e.preventDefault();
-var n=el['name'].value.trim(),t=el['telefon'].value.trim(),m=el['nachricht'].value.trim(),a=el['anliegen'].value;
-if(!n||!m){msg('Bitte tragen Sie Ihren Namen und Ihre Nachricht ein.',true);return}
-var body='Name: '+n+(t?'\nTelefon: '+t:'')+'\n\n'+m;
-msg('Ihr E-Mail-Programm sollte sich jetzt öffnen. Falls nicht, nutzen Sie "Adresse kopieren".');
-location.href='mailto:'+addr+'?subject='+encodeURIComponent('Anfrage: '+a)+'&body='+encodeURIComponent(body);
-});
-document.getElementById('copyBtn').addEventListener('click',function(){
-function done(ok){msg(ok?'Adresse kopiert: '+addr:'Bitte kopieren Sie die Adresse manuell: '+addr)}
-if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(function(){done(true)},fb)}else{fb()}
-function fb(){try{var x=document.createElement('textarea');x.value=addr;x.style.position='fixed';x.style.opacity='0';document.body.appendChild(x);x.select();var ok=document.execCommand('copy');document.body.removeChild(x);done(ok)}catch(e){done(false)}}
+if(el['botcheck'].checked)return;
+var n=el['name'].value.trim(),em=el['email'].value.trim(),t=el['telefon'].value.trim(),m=el['nachricht'].value.trim(),a=el['anliegen'].value;
+if(!n){msg('Bitte tragen Sie Ihren Namen ein.','err');el['name'].focus();return}
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){msg('Bitte tragen Sie eine gültige E-Mail-Adresse ein, damit ich antworten kann.','err');el['email'].focus();return}
+if(!m){msg('Bitte schreiben Sie kurz, worum es geht.','err');el['nachricht'].focus();return}
+var body='Name: '+n+'\nE-Mail: '+em+(t?'\nTelefon: '+t:'')+'\n\n'+m;
+send.disabled=true;msg('Wird gesendet …','');
+fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+body:JSON.stringify({access_key:KEY,subject:'Neue Anfrage über jt-dsm.com: '+a,from_name:'Kontaktformular jt-dsm.com',name:n,email:em,telefon:t||'–',anliegen:a,nachricht:m})})
+.then(function(r){return r.json().then(function(j){if(!r.ok||!j.success)throw new Error('fehler')})})
+.then(function(){
+f.reset();msg('Danke, Ihre Anfrage ist angekommen. Ich melde mich in der Regel innerhalb eines Werktags persönlich bei Ihnen.','ok');
+try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:'kontaktformular-gesendet',title:'Kontaktformular gesendet',event:true})}catch(x){}
+})
+.catch(function(){fallback(a,body)})
+.then(function(){send.disabled=false});
 });
 })();
 (function(){var q=new URLSearchParams(location.search),t=q.get('thema'),a=q.get('auswahl'),s=document.getElementById('cf-topic'),m=document.getElementById('cf-text');var l=a?a.split('|').filter(Boolean):[];if(l.length===1)t=l[0];if(l.length>1){t='Mehrere Leistungen';m.value='Ich interessiere mich für: '+l.join(', ')+'.\n\n'}if(t&&s){for(var i=0;i<s.options.length;i++){if(s.options[i].text===t)s.selectedIndex=i}}})();

@@ -25,7 +25,7 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="fonts/source-sans-3-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/bricolage-grotesque-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261107">
+<link rel="stylesheet" href="style.css?v=20261107b">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -83,7 +83,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classLi
 var f=document.getElementById('cform'); if(!f)return;
 var out=document.getElementById('cf-out'),el=f.elements,send=document.getElementById('cf-send'),addr='info@jt-dsm.com';
 var KEY='61acef21-5330-488e-8970-3fc6c5047a0f';
-function msg(t,kind){out.textContent=t;out.className=kind?'cf-'+kind:''}
+function msg(t,kind){out.textContent=t;out.className=kind?'cf-'+kind:'';if(kind){try{out.scrollIntoView({behavior:'smooth',block:'center'})}catch(x){out.scrollIntoView()}}}
 function fallback(a,body){
 msg('Das hat leider nicht geklappt. Bitte schreiben Sie mir direkt an ','err');
 var l=document.createElement('a');l.href='mailto:'+addr+'?subject='+encodeURIComponent('Anfrage: '+a)+'&body='+encodeURIComponent(body);l.textContent=addr;

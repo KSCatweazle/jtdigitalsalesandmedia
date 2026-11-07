@@ -450,3 +450,5 @@ nav a{padding:.85rem .9rem;font-size:1.1rem}
 #cf-out.cf-err{color:#ff8a80}
 #cf-out a{color:inherit}
 #cf-send:disabled{opacity:.6;cursor:wait}
+.cform select{-webkit-appearance:none;appearance:none;min-height:3.1rem;padding-right:2.6rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235cc3cf' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;background-size:1.1rem}
+.cform input:not([type=checkbox]){min-height:3.1rem}

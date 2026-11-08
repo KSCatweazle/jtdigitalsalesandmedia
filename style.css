@@ -470,21 +470,23 @@ footer{padding-bottom:5.5rem}
 /* Footer: drei Spalten, Rechtszeile mittig */
 footer{padding:3.5rem 0 5.5rem}
 footer .wrap.ft{display:block;text-align:left}
-.ft-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:2rem;padding-bottom:2.4rem}
-.ft-brand{justify-self:start}
-.ft-logo{font:700 1.3rem "Bricolage Grotesque",sans-serif;color:var(--ink);text-decoration:none;white-space:nowrap}
+.ft-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;padding-bottom:2.4rem}
+.ft-row>div{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:5.6rem;padding:1rem 1.2rem;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.ft-logo{font:700 1.25rem "Bricolage Grotesque",sans-serif;color:var(--ink);text-decoration:none;white-space:nowrap}
 .ft-logo span{color:var(--muted);font-weight:500}
-.ft-sl{margin:.4rem 0 0;color:var(--muted)}
-.ft-icons{display:flex;gap:.9rem;justify-self:center}
+.ft-sl{margin:.3rem 0 0;color:var(--muted);font-size:.95rem}
+.ft-row>.ft-icons{flex-direction:row;gap:.9rem}
 .ic-btn{display:inline-grid;place-items:center;width:2.9rem;height:2.9rem;border:1.5px solid var(--line);border-radius:50%;color:var(--ink);transition:border-color .15s,color .15s}
 .ic-btn:hover{border-color:var(--brand);color:var(--brand)}
 .ic-btn svg{width:1.25rem;height:1.25rem}
-.ft-partner{justify-self:end}
-.ft-partner .fp{text-align:left}
+.ft-partner .fp{border:0;background:none;padding:0;text-align:left}
+.ft-partner .fp{gap:.85rem}
+.ft-partner .fp-txt{white-space:nowrap;letter-spacing:.08em}
+.ft-row>.ft-partner{padding-inline:.8rem}
 .ft-leg{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem 0;margin:0;max-width:none;padding-top:1.6rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
 .ft-legal{display:inline-flex;gap:1.4rem}
 .ft-leg>span:first-child::after{content:"·";margin:0 1.1rem;opacity:.6}
 .ft-legal a{color:var(--muted);text-decoration:none}
 .ft-legal a:hover{color:var(--brand);text-decoration:underline}
-@media(max-width:60rem){.ft-row{grid-template-columns:1fr;justify-items:center;text-align:center;gap:1.8rem}.ft-brand,.ft-icons,.ft-partner{justify-self:center}}
+@media(max-width:64rem){.ft-row{grid-template-columns:1fr;gap:.9rem}}
 @media(max-width:44rem){.ft-leg{flex-direction:column}.ft-leg>span:first-child::after{content:none}}

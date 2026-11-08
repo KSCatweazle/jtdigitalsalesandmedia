@@ -462,3 +462,7 @@ body.has-sel .wa-fab{bottom:calc(5.6rem + env(safe-area-inset-bottom,0px))}
 footer{padding-bottom:5.5rem}
 @media(max-width:44rem){.wa-fab{right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));padding:.85rem}.wa-fab span{display:none}.wa-fab svg{width:1.75rem;height:1.75rem}}
 @media print{.wa-fab{display:none}}
+
+/* Footer: Social-Links */
+.soc{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+@media(max-width:44rem){footer .soc{order:1}}

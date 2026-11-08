@@ -466,3 +466,24 @@ footer{padding-bottom:5.5rem}
 /* Footer: Social-Links */
 .soc{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
 @media(max-width:44rem){footer .soc{order:1}}
+
+/* Footer, aufgeräumt */
+footer .wrap.ft{display:block;text-align:left}
+.ft-top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1.5rem 2rem;padding-bottom:1.6rem}
+.ft-brand p{margin:.2rem 0 0;color:var(--muted);font-size:.95rem}
+.ft-logo{font:700 1.15rem "Bricolage Grotesque",sans-serif;color:var(--ink);text-decoration:none;white-space:nowrap}
+.ft-logo span{color:var(--muted);font-weight:500}
+.ft-top .fp{justify-self:center}
+.ft-top .soc{justify-self:end;display:flex;gap:.6rem}
+.ft-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem 1.5rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+.ft-legal{display:flex;gap:1.4rem}
+.ft-legal a{color:var(--muted)}
+.ft-legal a:hover{color:var(--brand)}
+@media(max-width:52rem){
+.ft-top{grid-template-columns:1fr;justify-items:start;gap:1.3rem}
+.ft-top .fp,.ft-top .soc{justify-self:start}
+}
+@media(max-width:44rem){
+footer .wrap.ft{flex-direction:initial;align-items:initial;text-align:left}
+.ft-bottom{flex-direction:column;align-items:flex-start;gap:.5rem}
+}

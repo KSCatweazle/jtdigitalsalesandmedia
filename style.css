@@ -490,3 +490,7 @@ footer .wrap.ft{display:block;text-align:left}
 .ft-legal a:hover{color:var(--brand);text-decoration:underline}
 @media(max-width:64rem){.ft-row{grid-template-columns:1fr;gap:.9rem}}
 @media(max-width:44rem){.ft-leg{flex-direction:column}.ft-leg>span:first-child::after{content:none}}
+
+/* Ratgeber-Übersicht */
+.rg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:44rem){.rg-grid{grid-template-columns:1fr}}

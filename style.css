@@ -494,3 +494,22 @@ footer .wrap.ft{display:block;text-align:left}
 /* Ratgeber-Übersicht */
 .rg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:44rem){.rg-grid{grid-template-columns:1fr}}
+
+/* Regiokompass */
+.rk-hero{padding:4.5rem 0 4rem;text-align:center;background:radial-gradient(circle at 50% 0%,var(--soft),transparent 60%)}
+.rk-hero p{margin-inline:auto}
+.rk-hero .cta{justify-content:center}
+.rk-compass{width:7.5rem;height:7.5rem;color:var(--brand);margin:0 auto 1.6rem;display:block}
+@media(prefers-reduced-motion:no-preference){.rk-needle{transform-origin:60px 60px;animation:rk-swing 6s ease-in-out infinite}}
+@keyframes rk-swing{0%,100%{transform:rotate(-14deg)}50%{transform:rotate(18deg)}}
+.rk-hero h1{font-size:clamp(2.4rem,7vw,4rem);margin-bottom:.2em}
+.rk-by{color:var(--muted);font-weight:600;margin-bottom:1.6rem}
+.rk-lead{font-size:1.2rem;max-width:40rem}
+.rk-stores{display:inline-block;margin:.4rem auto 1.8rem;padding:.35rem 1rem;border:1px solid var(--line);border-radius:999px;color:var(--brand);font-weight:600;font-size:.95rem}
+.rk-feat>div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.4rem}
+.rk-feat h3{font:700 1.15rem "Bricolage Grotesque",sans-serif;margin-bottom:.4rem}
+.rk-feat p{color:var(--muted);font-size:.97rem;margin:0}
+.rk-for{max-width:44rem;text-align:center}
+.rk-for p{margin-inline:auto}
+.rk-for .cta{justify-content:center}
+.nav-badge{display:inline-block;margin-left:.35rem;padding:.05rem .45rem;border-radius:999px;background:var(--brand);color:var(--brand-ink);font-size:.7rem;font-weight:700;letter-spacing:.04em;vertical-align:middle;text-transform:uppercase}

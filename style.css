@@ -488,7 +488,8 @@ footer .wrap.ft{display:block;text-align:left}
 .ft-leg>span:first-child::after{content:"·";margin:0 1.1rem;opacity:.6}
 .ft-legal a{color:var(--muted);text-decoration:none}
 .ft-legal a:hover{color:var(--brand);text-decoration:underline}
-@media(max-width:64rem){.ft-row{grid-template-columns:1fr;gap:.9rem}}
+@media(max-width:64rem){.ft-row{grid-template-columns:minmax(0,1fr);gap:.9rem}}
+@media(max-width:23rem){.ft-row>div{padding-inline:.7rem}.ft-partner .fp{gap:.6rem}.ft-partner .fp-txt{letter-spacing:.04em}}
 @media(max-width:44rem){.ft-leg{flex-direction:column}.ft-leg>span:first-child::after{content:none}}
 
 /* Ratgeber-Übersicht */
@@ -521,5 +522,13 @@ footer .wrap.ft{display:block;text-align:left}
 .stoerer-txt{flex:1 1 20rem;font-size:1rem;line-height:1.45}
 .stoerer-go{flex:none;font-weight:700;white-space:nowrap;border-bottom:2px solid currentColor}
 .stoerer:hover .stoerer-go{border-color:transparent}
-@media(max-width:44rem){.stoerer-txt{font-size:.95rem}.stoerer-go{font-size:.95rem}}
+.st-kurz{display:none}
+@media(max-width:44rem){
+.st-lang{display:none}.st-kurz{display:inline}
+.stoerer-in{display:grid;grid-template-columns:auto 1fr;gap:.35rem .6rem;align-items:center;padding-top:.7rem;padding-bottom:.75rem}
+.stoerer-neu{font-size:.66rem;padding:.2rem .5rem}
+.stoerer-txt,.stoerer-go{white-space:nowrap;font-size:clamp(.74rem,3.55vw,.95rem);line-height:1.3}
+.stoerer-txt{flex:none}
+.stoerer-go{grid-column:2;justify-self:start;border-bottom-width:1.5px}
+}
 .tag-neu{display:inline-block;margin-left:.35rem;padding:.02rem .45rem;border-radius:999px;background:var(--brand);color:var(--brand-ink);font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle}

@@ -511,3 +511,15 @@ footer .wrap.ft{display:block;text-align:left}
 .rk-test p{color:var(--muted);margin-bottom:1.4rem}
 @media(max-width:44rem){.rk-hero{padding:3.2rem 0 4rem}.rk-test{padding:1.6rem 1.2rem}}
 .nav-badge{display:inline-block;margin-left:.35rem;padding:.05rem .45rem;border-radius:999px;background:var(--brand);color:var(--brand-ink);font-size:.7rem;font-weight:700;letter-spacing:.04em;vertical-align:middle;text-transform:uppercase}
+
+/* Störer Startseite + Neu-Markierung */
+.stoerer{display:block;background:var(--brand);color:var(--brand-ink);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--brand-ink) 20%,transparent)}
+.stoerer-in{display:flex;align-items:center;gap:.6rem 1.1rem;padding-top:.85rem;padding-bottom:.85rem;flex-wrap:wrap}
+.stoerer-neu{flex:none;background:var(--brand-ink);color:#fff;font:700 .78rem "Source Sans 3",sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .7rem;border-radius:999px}
+@media(prefers-reduced-motion:no-preference){.stoerer-neu{animation:neu-puls 2.4s ease-in-out infinite}}
+@keyframes neu-puls{0%,100%{box-shadow:0 0 0 0 rgba(8,38,43,.45)}50%{box-shadow:0 0 0 7px rgba(8,38,43,0)}}
+.stoerer-txt{flex:1 1 20rem;font-size:1rem;line-height:1.45}
+.stoerer-go{flex:none;font-weight:700;white-space:nowrap;border-bottom:2px solid currentColor}
+.stoerer:hover .stoerer-go{border-color:transparent}
+@media(max-width:44rem){.stoerer-txt{font-size:.95rem}.stoerer-go{font-size:.95rem}}
+.tag-neu{display:inline-block;margin-left:.35rem;padding:.02rem .45rem;border-radius:999px;background:var(--brand);color:var(--brand-ink);font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle}

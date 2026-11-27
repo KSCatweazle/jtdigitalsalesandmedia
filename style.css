@@ -521,5 +521,12 @@ footer .wrap.ft{display:block;text-align:left}
 .stoerer-txt{flex:1 1 20rem;font-size:1rem;line-height:1.45}
 .stoerer-go{flex:none;font-weight:700;white-space:nowrap;border-bottom:2px solid currentColor}
 .stoerer:hover .stoerer-go{border-color:transparent}
-@media(max-width:44rem){.stoerer-txt{font-size:.95rem}.stoerer-go{font-size:.95rem}}
+.st-kurz{display:none}
+@media(max-width:44rem){
+.st-lang{display:none}.st-kurz{display:inline}
+.stoerer-in{display:grid;grid-template-columns:auto 1fr;gap:.45rem .7rem;align-items:center;padding-top:.75rem;padding-bottom:.8rem}
+.stoerer-neu{font-size:.7rem;padding:.22rem .55rem}
+.stoerer-txt{flex:none;font-size:.92rem;line-height:1.35}
+.stoerer-go{grid-column:2;justify-self:start;font-size:.9rem}
+}
 .tag-neu{display:inline-block;margin-left:.35rem;padding:.02rem .45rem;border-radius:999px;background:var(--brand);color:var(--brand-ink);font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle}
